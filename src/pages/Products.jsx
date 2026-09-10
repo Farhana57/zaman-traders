@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 export default function Products() {
-  // স্ক্রল করার সময় ডান ও বাম দিক থেকে স্লাইড অ্যানিমেশন ট্রিগার করার জন্য
+  // স্ক্রল করার সময় ডান ও বাম দিক থেকে স্লাইড অ্যানিমেশন ট্রিগার করার জন্য
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -23,7 +23,7 @@ export default function Products() {
     return () => observer.disconnect();
   }, []);
 
-  // মোট ৯টি প্রোডাক্টের ডাটা (জোড়-বিজোড় অনুযায়ী বাম বা ডান থেকে স্লাইড সেট করা)
+  // মোট ৯টি প্রোডাক্টের ডাটা (জোড়-বিজোড় অনুযায়ী বাম বা ডান থেকে স্লাইড সেট করা)
   const products = [
     {
       title: "Jute Sacks & Bags",
@@ -96,13 +96,13 @@ export default function Products() {
         
         {/* উপরের কন্টেন্ট ও হেডার অংশ */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="inline-block bg-emerald-900/60 text-emerald-900 border border-emerald-500/30 text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-sm mb-3">
+          <span className="inline-block bg-emerald-900/60 text-emerald-300 border border-emerald-500/30 text-sm sm:text-base font-bold px-6 py-2 rounded-full uppercase tracking-wider shadow-md mb-2">
             Our Collection
           </span>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight mb-2">
             Explore Premium Jute Products
           </h2>
-          <p className="text-black text-base sm:text-lg">
+          <p className="text-black text-lg sm:text-xl leading-relaxed">
             Discover our comprehensive range of sustainable, durable, and eco-friendly industrial solutions designed for global standards.
           </p>
         </div>
@@ -112,7 +112,7 @@ export default function Products() {
           {products.map((product, index) => (
             <div
               key={index}
-              className={`slide-animation-item bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-xl hover:shadow-[0_20px_50px_rgba(16,185,129,0.3)] transition-all duration-700 ease-out hover:-translate-y-2 group flex flex-col justify-between opacity-0 ${product.slideFrom}`}
+              className={`slide-animation-item bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-xl hover:shadow-[0_20px_50px_rgba(16,185,129,0.3)] transition-all duration-700 ease-out hover:-translate-y-2 group flex flex-col justify-between opacity-0 ${product.slideFrom || ''}`}
             >
               <div>
                 <div className="relative overflow-hidden h-64 bg-slate-100">

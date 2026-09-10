@@ -5,7 +5,7 @@ const Export = () => {
 
   const images = [
     'https://plus.unsplash.com/premium_photo-1677695581626-2a75bdece138?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8anV0ZSUyMFRleHRpbGUlMjBvZmZpY2V8ZW58MHx8MHx8fDA%3D',
-    'https://images.unsplash.com/photo-1741275271299-a479e24420f7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGp1dGUlMjBUZXh0aWxlJTIwb2ZmaWNlfGVufDB8fDB8fHww'
+    'https://media.istockphoto.com/id/2261885218/photo/textile-weaving-machines.webp?a=1&b=1&s=612x612&w=0&k=20&c=68Z990QhVTlZ3sV8Y2MciyWmrNu6nI0f9AD5VI-9HEM='
   ];
 
   // Hero Image Slider Interval
@@ -48,9 +48,9 @@ const Export = () => {
             className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out ${
               activeSlide === index ? 'opacity-100' : 'opacity-0'
             }`}
-            style={{
-              backgroundImage: `linear-gradient(to bottom, rgba(6, 78, 59, 0.45), rgba(2, 44, 34, 0.55)), url('${img}')`,
-            }}
+           style={{
+  backgroundImage: `linear-gradient(to bottom, rgba(6, 78, 59, 0.25), rgba(2, 44, 34, 0.35)), url('${img}')`,
+}}
           />
         ))}
 
@@ -60,8 +60,8 @@ const Export = () => {
             Trusted Jute Exporter Since 1974
           </span>
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 drop-shadow-lg">
-            Worldwide Jute Export Services
-          </h1>
+  Worldwide <span className="text-emerald-400">Jute Export</span> Services
+</h1>
           <p className="text-emerald-100 text-lg sm:text-xl leading-relaxed max-w-3xl mx-auto drop-shadow-md">
             Delivering premium eco-friendly golden fiber products from Bangladesh to global markets with over 3 decades of excellence, strict quality control, and timely shipments.
           </p>
@@ -85,7 +85,9 @@ const Export = () => {
 <section className="py-20 px-4 sm:px-6 max-w-7xl mx-auto overflow-hidden">
   <div className="text-center max-w-2xl mx-auto mb-16">
     <h2 className="text-3xl md:text-4xl font-extrabold text-emerald-950 mb-4">Our Streamlined Export Process</h2>
-    <p className="text-slate-600 text-base">We ensure seamless door-to-port and port-to-port international shipping services.</p>
+    <p className="text-slate-700 text-lg sm:text-xl leading-relaxed">
+  We ensure seamless door-to-port and port-to-port international shipping services.
+</p>
   </div>
 
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -130,7 +132,7 @@ const Export = () => {
             <span className="inline-block bg-emerald-800 text-emerald-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3">Global Footprint</span>
             <h2 className="text-3xl md:text-4xl font-extrabold mb-6 leading-tight">Serving Clients Across Continents</h2>
             <p className="text-slate-300 text-base leading-relaxed mb-6">
-              Jahan Traders has established a robust international shipping network, supplying high-grade raw jute, yarn, sacks, and eco-friendly bags to international buyers.
+              Zaman Traders has established a robust international shipping network, supplying high-grade raw jute, yarn, sacks, and eco-friendly bags to international buyers.
             </p>
             <ul className="space-y-3 text-emerald-200">
               <li className="flex items-start gap-3">

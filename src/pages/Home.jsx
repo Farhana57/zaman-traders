@@ -96,11 +96,11 @@ export default function Home() {
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight text-white drop-shadow-lg max-w-4xl">
-            Jahan <span className="text-emerald-400">Traders</span>
+            Zaman <span className="text-emerald-400">Traders</span>
           </h1>
 
           <p className="max-w-2xl text-slate-100 text-base sm:text-lg lg:text-xl leading-relaxed mt-6 drop-shadow">
-            Jahan Traders is a trusted Bangladeshi manufacturer and exporter of premium quality jute products. We supply eco-friendly products worldwide with international quality standards.
+            Zaman Traders is a trusted Bangladeshi manufacturer and exporter of premium quality jute products. We supply eco-friendly products worldwide with international quality standards.
           </p>
 
           <div className="flex flex-wrap gap-4 pt-8">
@@ -196,10 +196,10 @@ export default function Home() {
           {/* Text Slide from Left */}
           <div className="space-y-6 animate-on-scroll opacity-0 -translate-x-20 transition-all duration-1000 ease-out">
             <span className="text-emerald-900 font-semibold text-sm uppercase tracking-wider bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
-              WELCOME TO JAHAN TRADERS
+              WELCOME TO ZAMAN TRADERS
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
-              JAHAN TRADERS is a leading Bangladeshi jute exporter and manufacturer...
+              ZAMAN TRADERS is a leading Bangladeshi jute exporter and manufacturer...
             </h2>
             <p className="text-slate-700 leading-relaxed text-base">
               With over 3 decades of experience, we have earned a reputation as a trusted global provider, exporting all kinds of quality jute and jute products worldwide. Our commitment to excellence guarantees premium solutions for our clients.
@@ -414,7 +414,7 @@ export default function Home() {
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
       {[
         {
-          quote: "Jahan Traders provides the best quality jute sacks. Their reliability, strict compliance, and on-time international delivery are unmatched.",
+          quote: "zaman Traders provides the best quality jute sacks. Their reliability, strict compliance, and on-time international delivery are unmatched.",
           initials: "JD",
           name: "John Doe",
           role: "Managing Director, UK"

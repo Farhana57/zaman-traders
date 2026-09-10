@@ -70,3 +70,6 @@ body.hovered .custom-cursor {
     opacity: 1;
     transform: translate(0, 0);
 }
+.zaman-heading-title {
+  color: #047857 !important;
+}

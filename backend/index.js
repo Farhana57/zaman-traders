@@ -15,7 +15,7 @@ app.use(express.json());
 // MongoDB Database Connection with SRV String
 async function connectDB() {
   try {
-    await mongoose.connect('mongodb+srv://farhana5253:JahantradersAnisuzzaman317@cluster0.aqlxqdi.mongodb.net/jahan_traders?retryWrites=true&w=majority&appName=Cluster0');
+    await mongoose.connect('mongodb+srv://farhana5253:JahantradersAnisuzzaman317@cluster0.aqlxqdi.mongodb.net/Zaman Traders?retryWrites=true&w=majority&appName=Cluster0');
     console.log('Database connected successfully!');
   } catch (error) {
     console.error('Detailed Database Connection Error:', error.message);

@@ -9,13 +9,13 @@ export default function AboutContent() {
 
   const heroSlides = [
     {
-      title: "About JAHAN Traders",
-      subtitle: "Global excellence in sustainable jute and eco-friendly products since 1974.",
+      title: "About Zaman Traders",
+      subtitle: "Global excellence in sustainable jute and eco-friendly products since 1974. Delivering premium quality jute sacks, yarn, and geotextiles worldwide.",
       bg: "https://images.unsplash.com/photo-1741176504904-63c5b54d35e5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGp1dGUlMjBUZXh0aWxlJTIwb2ZmaWNlfGVufDB8fDB8fHww",
     },
     {
       title: "3 Decades of Unmatched Trust",
-      subtitle: "Delivering premium quality jute sacks, yarn, and geotextiles worldwide.",
+      subtitle: "Global excellence in sustainable jute and eco-friendly products since 1974. Delivering premium quality jute sacks, yarn, and geotextiles worldwide.",
       bg: "https://images.unsplash.com/photo-1741275271764-71261e3dc0b4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGp1dGUlMjBUZXh0aWxlJTIwb2ZmaWNlfGVufDB8fDB8fHww",
     },
   ];
@@ -48,6 +48,8 @@ export default function AboutContent() {
     };
   }, []);
 
+  const currentSlide = heroSlides[activeSlide];
+
   return (
     <div className="bg-slate-50 text-slate-800">
       {/* ================= HERO SECTION ================= */}
@@ -59,20 +61,30 @@ export default function AboutContent() {
               index === activeSlide ? "opacity-100 scale-100" : "opacity-0 scale-105"
             }`}
             style={{
-              backgroundImage: `linear-gradient(to bottom, rgba(2, 10, 34, 0.3), rgba(2, 6, 10, 0.3)), url('${slide.bg}')`,
+              backgroundImage: `linear-gradient(to bottom, rgba(2, 10, 34, 0.4), rgba(2, 6, 10, 0.4)), url('${slide.bg}')`,
             }}
           />
         ))}
 
-        <div className="relative z-10 max-w-4xl mx-auto text-center px-6 text-white transition-all duration-700">
+        <div className="relative z-10 max-w-5xl mx-auto text-center px-6 text-white transition-all duration-700">
           <span className="bg-emerald-500/20 border border-emerald-400 text-emerald-300 text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full uppercase tracking-wider mb-4 inline-block animate-pulse">
             Our Legacy & Excellence
           </span>
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4 drop-shadow-md">
-            {heroSlides[activeSlide].title}
+          
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 drop-shadow-lg">
+            {activeSlide === 0 ? (
+              <>
+                <span className="text-emerald-400">About Zaman</span> <span className="text-white">Traders</span>
+              </>
+            ) : (
+              <>
+                <span className="text-emerald-400">3 Decades of</span> <span className="text-white">Unmatched Trust</span>
+              </>
+            )}
           </h1>
-          <p className="text-slate-300 text-base sm:text-xl max-w-2xl mx-auto leading-relaxed">
-            {heroSlides[activeSlide].subtitle}
+
+          <p className="text-slate-100 text-lg sm:text-2xl max-w-3xl mx-auto leading-relaxed drop-shadow-md font-medium">
+            {currentSlide.subtitle}
           </p>
         </div>
 
@@ -88,24 +100,28 @@ export default function AboutContent() {
           ))}
         </div>
       </section>
+
       {/* ================= ABOUT US CONTENT ================= */}
       <section className="py-20 px-6 max-w-7xl mx-auto overflow-hidden">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block bg-emerald-100 text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-sm mb-3">
-  About <span style={{ color: '#047857 !important' }} className="text-emerald-900">Jahan Traders</span>
-</span>
+          <div className="text-center mb-6">
+            <span className="inline-block bg-emerald-100 text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-sm mb-3 text-emerald-800">
+              About Us
+            </span>
+            <h1 className="text-2xl sm:text-3xl font-extrabold" style={{ color: '#047857' }}>
+              Zaman Traders
+            </h1>
+          </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-emerald-950 tracking-tight mb-6">
             Your Trusted Partner in Premium Jute Export
           </h2>
           <p className="text-slate-900 text-base sm:text-lg leading-relaxed">
-            Based in Bangladesh, the heart of the golden fiber, Jahan Traders is committed to delivering top-quality eco-friendly jute products worldwide. With years of expertise and rigorous quality control, we ensure sustainable solutions for global industries.
+            Based in Bangladesh, the heart of the golden fiber, Zaman Traders is committed to delivering top-quality eco-friendly jute products worldwide. With years of expertise and rigorous quality control, we ensure sustainable solutions for global industries.
           </p>
         </div>
 
-        {/* এই ডিভে ref যুক্ত করা হয়েছে যাতে এটি স্ক্রিনে আসলে ট্র্যাক করা যায় */}
         <div ref={aboutRef} className="grid md:grid-cols-2 gap-12 items-center overflow-hidden">
-          
-          {/* Left Side: Image (বাম দিক থেকে স্লাইড হবে) */}
+          {/* Left Side: Image */}
           <div
             className={`rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-emerald-800/40 bg-white relative group transition-all duration-1000 ease-out transform ${
               isVisible ? "translate-x-0 opacity-100" : "-translate-x-32 opacity-0"
@@ -114,12 +130,12 @@ export default function AboutContent() {
             <div className="absolute inset-0 bg-emerald-950/20 group-hover:bg-transparent transition-all duration-500 z-10"></div>
             <img
               src="https://images.unsplash.com/photo-1748169207012-6ed2f64aedf6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGp1dGV8ZW58MHx8MHx8fDA%3D"
-              alt="Jahan Traders Office"
+              alt="Zaman Traders Office"
               className="w-full h-full object-cover aspect-[4/3] transition-transform duration-700 group-hover:scale-110"
             />
           </div>
 
-          {/* Right Side: Text Content (ডান দিক থেকে স্লাইড হবে) */}
+          {/* Right Side: Text Content */}
           <div
             className={`space-y-6 transition-all duration-1000 ease-out delay-200 transform ${
               isVisible ? "translate-x-0 opacity-100" : "translate-x-32 opacity-0"
@@ -145,7 +161,6 @@ export default function AboutContent() {
               </div>
             </div>
           </div>
-          
         </div>
       </section>
     </div>

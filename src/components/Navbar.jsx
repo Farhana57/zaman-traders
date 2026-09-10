@@ -36,7 +36,7 @@ export default function Navbar() {
             </span>
             <span className="flex items-center gap-1.5">
               <Mail size={14} className="text-emerald-300" />
-              info@jahantraders.com
+               zzamanjute@gmail.com
             </span>
           </div>
 
@@ -76,10 +76,10 @@ export default function Navbar() {
           
           {/* LOGO & SUBTEXT */}
           <Link to="/" onClick={closeMobileMenu} className="flex items-center gap-3">
-            <img src={logo} alt="Jahan Traders" className="h-12 w-auto" />
+            <img src={logo} alt="zaman Traders" className="h-12 w-auto" />
             <div className="flex flex-col">
               <span className="text-lg font-bold tracking-tight text-slate-900 leading-none">
-                JAHAN TRADERS
+                ZAMAN TRADERS
               </span>
               <span className="text-xs text-emerald-700 font-semibold tracking-wider mt-1">
                 Premium Jute Exporter
@@ -113,9 +113,9 @@ export default function Navbar() {
 
               {dropdownOpen && (
                 <div className="absolute top-full left-0 w-64 bg-white border border-slate-100 rounded-xl shadow-xl p-2 z-50">
-                  <Link to="/products/jute-sacks" className="block px-4 py-2 hover:bg-emerald-100 rounded-lg text-slate-700 hover:text-emerald-900">Jute Sacks & Bags</Link>
-                  <Link to="/products/jute-yarn" className="block px-4 py-2 hover:bg-emerald-100 rounded-lg text-slate-700 hover:text-emerald-900">Jute Yarn & Twine</Link>
-                  <Link to="/products/geotextiles" className="block px-4 py-2 hover:bg-emerald-100 rounded-lg text-slate-700 hover:text-emerald-900">Jute Geotextiles</Link>
+                  <Link to="/products/jute-sacks" className="block px-4 py-2 hover:bg-amber-100 rounded-lg text-slate-800 hover:text-emerald-900">Jute Sacks & Bags</Link>
+                  <Link to="/products/jute-yarn" className="block px-4 py-2 hover:bg-amber-100 rounded-lg text-slate-800 hover:text-emerald-900">Jute Yarn & Twine</Link>
+                  <Link to="/products/geotextiles" className="block px-4 py-2 hover:bg-amber-100 rounded-lg text-slate-800 hover:text-emerald-900">Jute Geotextiles</Link>
                 </div>
               )}
             </div>
@@ -145,7 +145,7 @@ export default function Navbar() {
             </Link>
 
             {/* SEARCH BUTTON */}
-            <button className="w-10 h-10 rounded-full bg-slate-100 hover:bg-emerald-100 flex items-center justify-center text-slate-700 hover:text-emerald-700 transition shadow-sm">
+            <button className="w-10 h-10 rounded-full bg-slate-100 hover:bg-amber-300 flex items-center justify-center text-slate-700 hover:text-emerald-700 transition shadow-sm">
               <Search size={18} />
             </button>
           </div>
@@ -172,7 +172,7 @@ export default function Navbar() {
                 <ChevronDown size={16} className={`transition-transform duration-300 ${dropdownOpen ? "rotate-180" : ""}`} />
               </button>
               {dropdownOpen && (
-                <div className="mt-2 pl-4 space-y-2 border-l-2 border-emerald-700">
+                <div className="mt-2 pl-4 space-y-2 border-l-2 border-amber-500">
                   <Link to="/products/jute-sacks" onClick={closeMobileMenu} className="block text-sm hover:text-amber-500">Jute Sacks & Bags</Link>
                   <Link to="/products/jute-yarn" onClick={closeMobileMenu} className="block text-sm hover:text-amber-500">Jute Yarn & Twine</Link>
                   <Link to="/products/geotextiles" onClick={closeMobileMenu} className="block text-sm hover:text-amber-500">Jute Geotextiles</Link>
@@ -194,9 +194,9 @@ export default function Navbar() {
                 <span className="relative z-10">Contact Us</span>
               </Link>
               
-              <button className="w-11 h-11 rounded-lg bg-slate-100 flex items-center justify-center text-slate-700">
-                <Search size={20} />
-              </button>
+              <button className="w-11 h-11 rounded-lg bg-slate-100 flex items-center justify-center text-slate-700 hover:bg-amber-500 hover:text-white transition-all duration-300 shadow-sm">
+          <Search size={20} />
+      </button>
             </div>
           </div>
         )}

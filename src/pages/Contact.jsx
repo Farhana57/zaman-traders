@@ -79,7 +79,7 @@ export default function Contact() {
             <div>
               <h4 className="font-bold text-slate-900 text-base sm:text-lg">Office Address</h4>
               <p className="text-slate-800 text-sm sm:text-base mt-1.5 leading-relaxed">
-                JAHAN Traders.<br />
+                ZAMAN Traders.<br />
                 3 R K mission road, Motijheel C/A, Dhaka 1203, Bangladesh.
               </p>
             </div>
@@ -109,9 +109,14 @@ export default function Contact() {
             </div>
             <div>
               <h4 className="font-bold text-slate-900 text-base sm:text-lg">Email</h4>
-              <a href="mailto:Jahantraders86@gmail.com" className="text-emerald-900 hover:underline text-sm sm:text-base font-semibold mt-1.5 inline-block break-all">
-                Jahantraders86@gmail.com
-              </a>
+              <div className="flex flex-col mt-1.5 gap-1">
+                <a href="mailto:zamantraders83620@gmail.com" className="text-emerald-900 hover:underline text-sm sm:text-base font-semibold break-all">
+                  zamantraders83620@gmail.com
+                </a>
+                <a href="mailto:zzamanjute@gmail.com" className="text-emerald-900 hover:underline text-sm sm:text-base font-semibold break-all">
+                  zzamanjute@gmail.com
+                </a>
+              </div>
             </div>
           </div>
 
@@ -124,7 +129,7 @@ export default function Contact() {
             </div>
             <div>
               <h4 className="font-bold text-slate-900 text-base sm:text-lg">Website</h4>
-              <span className="text-slate-900 text-sm sm:text-base font-medium mt-1.5 inline-block">jahantradersbd.com</span>
+              <span className="text-slate-900 text-sm sm:text-base font-medium mt-1.5 inline-block">zamantradersbd.com</span>
             </div>
           </div>
 
@@ -133,12 +138,12 @@ export default function Contact() {
     </div>
 
     {/* Right Side: Contact Form with Lighter Background Image (Slides in from Right) */}
-    <div 
+   <div 
       className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 p-6 sm:p-10 bg-cover bg-center bg-no-repeat animate-on-scroll slide-from-right flex flex-col justify-between" 
       style={{ 
-        backgroundImage: "linear-gradient(to bottom, rgba(11, 20, 38, 0.75), rgba(11, 20, 38, 0.75)), url('https://plus.unsplash.com/premium_photo-1675738774450-0831cf002f64?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fEp1dGUlMjBZYXJuJTIwJTI2JTIwVHdpbmV8ZW58MHx8MHx8fDA%3D')" 
+        backgroundImage: "linear-gradient(to bottom, rgba(11, 10, 10, 0.55), rgba(11, 10, 10, 0.55)), url('https://plus.unsplash.com/premium_photo-1675738774450-0831cf002f64?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fEp1dGUlMjBZYXJuJTIwJTI2JTIwVHdpbmV8ZW58MHx8MHx8fDA%3D')" 
       }}
-    >
+    > 
       <div>
         <h3 className="text-2xl sm:text-3xl font-extrabold text-white mb-6 sm:mb-8 relative z-10">
           Send Us a Message

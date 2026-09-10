@@ -13,13 +13,13 @@ const Footer = () => {
                     <a href="#" className="inline-block overflow-hidden mb-4 group">
                         <img 
                             src={logo} 
-                            alt="Jahan Traders Logo" 
+                            alt="zaman Traders Logo" 
                             className="h-10 sm:h-12 w-auto object-contain transform transition-all duration-500 ease-out group-hover:scale-110 group-hover:brightness-110" 
                         />
                     </a>
                     
                     <p className="text-slate-400 text-sm leading-relaxed mb-6">
-                        JAHAN Traders is a trusted manufacturer and exporter of premium quality eco-friendly jute products from Bangladesh. We supply Jute Yarn, Rope, Bags, Hessian Cloth, Burlap, Geo Textile and many more products worldwide with international quality standards.
+                        ZAMAN Traders is a trusted manufacturer and exporter of premium quality eco-friendly jute products from Bangladesh. We supply Jute Yarn, Rope, Bags, Hessian Cloth, Burlap, Geo Textile and many more products worldwide with international quality standards.
                     </p>
                     
                     {/* Social Icons */}
@@ -88,7 +88,7 @@ const Footer = () => {
                             <div className="break-all">
                                 <p>Jute83620@gmail.com</p>
                                 <p>zzamanjute@gmail.com</p>
-                                <p>jahantraders86@gmail.com</p>
+                                <p>zamantraders83620@gmail.com</p>
                             </div>
                         </div>
                     </div>
