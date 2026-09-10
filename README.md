@@ -1,4 +1,4 @@
-# Jahan Traders - Jute Products Web Application
+# Zaman Traders - Jute Products Web Application
 
 A full-stack web application built for **Jahan Traders** to showcase and manage eco-friendly jute products, featuring a modern React frontend and a robust backend.
 
