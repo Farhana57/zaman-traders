@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+/* মোবাইল বা সব ডিভাইসে ফন্ট স্পষ্ট ও স্মুথ রাখার জন্য */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%; /* মোবাইলে ফন্ট অটো-রিসাইজ হওয়া রোধ করতে */
+    overflow-x: hidden; /* মোবাইলে ডানে-বামে স্ক্রল হওয়া রোধ করতে */
+}
+
 /* Custom Cursor - Only apply on desktop screens to prevent mobile glitches */
 @media (min-width: 768px) {
   body, a, button, input, textarea {
@@ -45,7 +54,7 @@
   }
 }
 
-/* সব ডিভাইস ও স্ক্রিনের জন্য সেকশন এবং টেক্সট সবসময় দৃশ্যমান রাখা হলো */
+/* সব ডিভাইস ও স্ক্রিনের জন্য সেকশন এবং টেক্সট সবসময় দৃশ্যমান রাখা হলো */
 .slide-from-left,
 .slide-from-right,
 .animate-on-scroll {
