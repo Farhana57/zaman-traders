@@ -45,43 +45,12 @@
   }
 }
 
-/* Fallback for mobile so text/cards never stay invisible if JS animation lags */
+/* সব ডিভাইস ও স্ক্রিনের জন্য সেকশন এবং টেক্সট সবসময় দৃশ্যমান রাখা হলো */
 .slide-from-left,
 .slide-from-right,
 .animate-on-scroll {
-    opacity: 1;
-    transform: none;
-}
-
-/* For Desktop screens, keep the smooth scroll animations */
-@media (min-width: 768px) {
-  .slide-from-left {
-      opacity: 0;
-      transform: translateX(-50px);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-  }
-
-  .slide-from-right {
-      opacity: 0;
-      transform: translateX(50px);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-  }
-
-  .slide-from-left.animate-in,
-  .slide-from-right.animate-in {
-      opacity: 1;
-      transform: translateX(0);
-  }
-
-  .animate-on-scroll {
-      opacity: 0;
-      will-change: opacity, transform;
-  }
-
-  .animate-on-scroll.animate-in {
-      opacity: 1;
-      transform: translate(0, 0);
-  }
+    opacity: 1 !important;
+    transform: none !important;
 }
 
 .zaman-heading-title {
