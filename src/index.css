@@ -49,7 +49,7 @@
 .slide-from-left,
 .slide-from-right,
 .animate-on-scroll {
-    opacity: 1; /* মোবাইলে যেন ইনিশিয়ালি লুকানো না থাকে */
+    opacity: 1;
     transform: none;
 }
 
