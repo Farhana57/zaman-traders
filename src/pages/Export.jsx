@@ -64,17 +64,50 @@ const Export = () => {
         </div>
       </section>
 
-      {/* ================= EXPORT PROCESS SECTION (6 CARDS WITH IMAGES, NO STEP TITLES) ================= */}
-      <section className="py-20 px-4 sm:px-6 max-w-7xl mx-auto overflow-hidden">
+      {/* ================= EXPORT PROCESS (PREMIUM CARDS) ================= */}
+      <section className="py-20 px-4 sm:px-6 max-w-7xl mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-emerald-950 mb-4">Our Streamlined Export Process</h2>
-          <p className="text-slate-700 text-lg sm:text-xl leading-relaxed">
-            We ensure seamless door-to-port and port-to-port international shipping services.
+          <span className="text-emerald-700 font-semibold tracking-wider uppercase text-sm bg-emerald-100 px-3 py-1 rounded-full">Step-by-Step Execution</span>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-emerald-950 mt-3 mb-4">Our Streamlined Export Workflow</h2>
+          <p className="text-slate-600 text-lg">
+            Precision and dedication at every single stage of international trade.
           </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          
+          {[
+            { title: "Order & Inquiry", desc: "Client specifies requirements, quality, grading, and quantity for custom packaging." },
+            { title: "Quality Control", desc: "Rigorous inspection and moisture testing to meet international export benchmarks." },
+            { title: "Secure Packaging", desc: "Compressed bales and moisture-proof packing to ensure safe sea or air cargo transit." },
+            { title: "Customs & Documentation", desc: "Managing all export compliance, bills of lading, and legal paperwork smoothly." },
+            { title: "Container Stuffing", desc: "Professional loading of goods into shipping containers to maximize space and safety." },
+            { title: "Global Delivery", desc: "Timely dispatch and door-to-port or port-to-port worldwide shipping execution." }
+          ].map((step, idx) => (
+            <div key={idx} className="group bg-white p-8 rounded-3xl shadow-xl shadow-emerald-900/5 border border-emerald-100/60 hover:shadow-2xl hover:border-emerald-300 transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-50 rounded-bl-full -z-0 group-hover:bg-emerald-100 transition-colors duration-500"></div>
+              <div className="relative z-10">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-600 to-emerald-800 text-white font-extrabold flex items-center justify-center text-xl mb-6 shadow-md group-hover:scale-110 transition-transform duration-300">
+                  0{idx + 1}
+                </div>
+                <h3 className="font-bold text-xl text-emerald-950 mb-3 group-hover:text-emerald-700 transition-colors">{step.title}</h3>
+                <p className="text-slate-600 text-sm sm:text-base leading-relaxed">{step.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ================= GALLERY IMAGE CARDS SECTION ================= */}
+      <section className="py-12 px-4 sm:px-6 max-w-7xl mx-auto overflow-hidden">
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <span className="text-emerald-700 font-semibold tracking-wider uppercase text-sm bg-emerald-100 px-3 py-1 rounded-full">Visual Showcase</span>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-emerald-950 mt-3 mb-4">Export Products Gallery</h2>
+          <p className="text-slate-700 text-lg sm:text-xl leading-relaxed">
+            High-grade manufactured goods ready for international deployment.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             { desc: "Client specifies requirements, quality, grading, and quantity for custom packaging.", img: juteSackImg },
             { desc: "Rigorous inspection and moisture testing to meet international export benchmarks.", img: bagssImg },
@@ -83,7 +116,6 @@ const Export = () => {
             { desc: "Professional loading of goods into shipping containers to maximize space and safety.", img: juteFloorMatImg },
             { desc: "Timely dispatch and door-to-port or port-to-port worldwide shipping execution.", img: 'https://media.istockphoto.com/id/1151287557/photo/cream-cotton-linen-fabric-seamless-texture.webp?a=1&b=1&s=612x612&w=0&k=20&c=4-xB6Sg0hWxQaVFfFkk8YwgKZed6ndkuv6OKikk4M1c=' },
           ].map((item, idx) => {
-            // ইমেজের নাম থেকে কার্ডের টাইটেল নির্ধারণ করা হচ্ছে
             const titles = [
               "Order & Inquiry",
               "Quality Control",
@@ -95,9 +127,10 @@ const Export = () => {
             const cardTitle = titles[idx];
 
             return (
-              <div key={idx} className="bg-white rounded-3xl shadow-lg border border-slate-100 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col">
-                <div className="h-48 overflow-hidden relative">
-                  <img src={item.img} alt={cardTitle} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+              <div key={idx} className="bg-white rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col group">
+                <div className="h-56 overflow-hidden relative">
+                  <img src={item.img} alt={cardTitle} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/60 via-transparent to-transparent opacity-60"></div>
                 </div>
                 <div className="p-6 sm:p-8 flex flex-col flex-grow text-center">
                   <h3 className="font-bold text-xl text-emerald-950 mb-3">{cardTitle}</h3>
@@ -106,8 +139,7 @@ const Export = () => {
               </div>
             );
           })}
-
-</div>
+        </div>
       </section>
 
       {/* ================= GLOBAL REACH SECTION ================= */}
