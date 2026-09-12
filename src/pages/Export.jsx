@@ -22,58 +22,35 @@ const Export = () => {
     return () => clearInterval(timer);
   }, [images.length]);
 
-  // Scroll Animation Observer for Cards & Sections
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate-in');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    const elements = document.querySelectorAll('.animate-on-scroll');
-    elements.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <div className="bg-slate-50 min-h-screen overflow-hidden">
       
-      {/* ================= HERO SECTION WITH BACKGROUND IMAGE SLIDER ================= */}
+      {/* ================= HERO SECTION ================= */}
       <section className="bg-emerald-900 py-24 px-6 text-center text-white relative overflow-hidden">
-        
-        {/* Background Slider Images with Lighter Dark Overlay */}
         {images.map((img, index) => (
           <div
             key={index}
             className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out ${
               activeSlide === index ? 'opacity-100' : 'opacity-0'
             }`}
-           style={{
-  backgroundImage: `linear-gradient(to bottom, rgba(6, 78, 59, 0.25), rgba(2, 44, 34, 0.35)), url('${img}')`,
-}}
+            style={{
+              backgroundImage: `linear-gradient(to bottom, rgba(6, 78, 59, 0.25), rgba(2, 44, 34, 0.35)), url('${img}')`,
+            }}
           />
         ))}
 
-        {/* Content */}
         <div className="max-w-4xl mx-auto relative z-10">
           <span className="inline-block bg-emerald-700/85 backdrop-blur-md text-emerald-100 text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full uppercase tracking-wider mb-4 border border-emerald-500 shadow-sm">
             Trusted Jute Exporter Since 1974
           </span>
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 drop-shadow-lg">
-  Worldwide <span className="text-emerald-400">Jute Export</span> Services
-</h1>
+            Worldwide <span className="text-emerald-400">Jute Export</span> Services
+          </h1>
           <p className="text-emerald-100 text-lg sm:text-xl leading-relaxed max-w-3xl mx-auto drop-shadow-md">
             Delivering premium eco-friendly golden fiber products from Bangladesh to global markets with over 3 decades of excellence, strict quality control, and timely shipments.
           </p>
         </div>
 
-        {/* Slider Dots Indicator */}
         <div className="absolute bottom-6 left-0 right-0 z-20 flex justify-center gap-2">
           {images.map((_, index) => (
             <button
@@ -87,47 +64,42 @@ const Export = () => {
         </div>
       </section>
 
-       {/* ================= EXPORT PROCESS SECTION (6 CARDS WITH IMAGES) ================= */}
-<section className="py-20 px-4 sm:px-6 max-w-7xl mx-auto overflow-hidden">
-  <div className="text-center max-w-2xl mx-auto mb-16">
-    <h2 className="text-3xl md:text-4xl font-extrabold text-emerald-950 mb-4">Our Streamlined Export Process</h2>
-    <p className="text-slate-700 text-lg sm:text-xl leading-relaxed">
-      We ensure seamless door-to-port and port-to-port international shipping services with top-tier products.
-    </p>
-  </div>
-
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-    
-    {[
-      { step: "1", title: "Order & Inquiry", desc: "Client specifies requirements, quality, grading, and quantity for custom packaging.", img: juteSackImg },
-      { step: "2", title: "Quality Control", desc: "Rigorous inspection and moisture testing to meet international export benchmarks.", img: bagssImg },
-      { step: "3", title: "Secure Packaging", desc: "Compressed bales and moisture-proof packing to ensure safe sea or air cargo transit.", img: hankImg },
-      { step: "4", title: "Customs & Documentation", desc: "Managing all export compliance, bills of lading, and legal paperwork smoothly.", img: gunnyBagsImg },
-      { step: "5", title: "Container Stuffing", desc: "Professional loading of goods into shipping containers to maximize space and safety.", img: juteFloorMatImg },
-      { step: "6", title: "Global Delivery", desc: "Timely dispatch and door-to-port or port-to-port worldwide shipping execution.", img: 'https://media.istockphoto.com/id/1151287557/photo/cream-cotton-linen-fabric-seamless-texture.webp?a=1&b=1&s=612x612&w=0&k=20&c=4-xB6Sg0hWxQaVFfFkk8YwgKZed6ndkuv6OKikk4M1c=' },
-    ].map((item, idx) => (
-      <div key={idx} className="bg-white rounded-3xl shadow-lg border border-slate-100 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col">
-        <div className="h-48 overflow-hidden relative">
-          <img src={item.img} alt={item.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
-          <span className="absolute top-3 left-3 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
-            Step {item.step}
-          </span>
+      {/* ================= EXPORT PROCESS SECTION (6 CARDS WITH IMAGES, NO STEP TITLES) ================= */}
+      <section className="py-20 px-4 sm:px-6 max-w-7xl mx-auto overflow-hidden">
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-emerald-950 mb-4">Our Streamlined Export Process</h2>
+          <p className="text-slate-700 text-lg sm:text-xl leading-relaxed">
+            We ensure seamless door-to-port and port-to-port international shipping services.
+          </p>
         </div>
-        <div className="p-6 sm:p-8 flex flex-col flex-grow text-center">
-          <h3 className="font-bold text-xl text-emerald-950 mb-3">{item.title}</h3>
-          <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          {[
+            { title: "Order & Inquiry", desc: "Client specifies requirements, quality, grading, and quantity for custom packaging.", img: juteSackImg },
+            { title: "Quality Control", desc: "Rigorous inspection and moisture testing to meet international export benchmarks.", img: bagssImg },
+            { title: "Secure Packaging", desc: "Compressed bales and moisture-proof packing to ensure safe sea or air cargo transit.", img: hankImg },
+            { title: "Customs & Documentation", desc: "Managing all export compliance, bills of lading, and legal paperwork smoothly.", img: gunnyBagsImg },
+            { title: "Container Stuffing", desc: "Professional loading of goods into shipping containers to maximize space and safety.", img: juteFloorMatImg },
+            { title: "Global Delivery", desc: "Timely dispatch and door-to-port or port-to-port worldwide shipping execution.", img: 'https://media.istockphoto.com/id/1151287557/photo/cream-cotton-linen-fabric-seamless-texture.webp?a=1&b=1&s=612x612&w=0&k=20&c=4-xB6Sg0hWxQaVFfFkk8YwgKZed6ndkuv6OKikk4M1c=' },
+          ].map((item, idx) => (
+            <div key={idx} className="bg-white rounded-3xl shadow-lg border border-slate-100 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col">
+              <div className="h-48 overflow-hidden relative">
+                <img src={item.img} alt={item.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+              </div>
+              <div className="p-6 sm:p-8 flex flex-col flex-grow text-center">
+                <h3 className="font-bold text-xl text-emerald-950 mb-3">{item.title}</h3>
+                <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+
         </div>
-      </div>
-    ))}
+      </section>
 
-  </div>
-</section>
-
-      {/* ================= GLOBAL REACH / MARKETS SECTION ================= */}
+      {/* ================= GLOBAL REACH SECTION ================= */}
       <section className="bg-emerald-950 text-white py-20 px-6 overflow-hidden">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            
-          {/* Left Side: Global Footprint */}
           <div>
             <span className="inline-block bg-emerald-800 text-emerald-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3">Global Footprint</span>
             <h2 className="text-3xl md:text-4xl font-extrabold mb-6 leading-tight">Serving Clients Across Continents</h2>
@@ -150,7 +122,6 @@ const Export = () => {
             </ul>
           </div>
 
-          {/* Right Side: Export Documentation Support */}
           <div className="bg-emerald-900 p-6 sm:p-8 rounded-3xl border border-emerald-800 shadow-2xl">
             <h3 className="text-2xl font-bold mb-3 text-white">Export Documentation Support</h3>
             <p className="text-emerald-100 text-sm mb-6 leading-relaxed">
@@ -172,7 +143,6 @@ const Export = () => {
               </div>
             </div>
           </div>
-
         </div>
       </section>
     </div>
