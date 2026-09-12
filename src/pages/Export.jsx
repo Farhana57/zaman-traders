@@ -116,13 +116,13 @@ const Export = () => {
             { desc: "Professional loading of goods into shipping containers to maximize space and safety.", img: juteFloorMatImg },
             { desc: "Timely dispatch and door-to-port or port-to-port worldwide shipping execution.", img: 'https://media.istockphoto.com/id/1151287557/photo/cream-cotton-linen-fabric-seamless-texture.webp?a=1&b=1&s=612x612&w=0&k=20&c=4-xB6Sg0hWxQaVFfFkk8YwgKZed6ndkuv6OKikk4M1c=' },
           ].map((item, idx) => {
-            const titles = [
-              "Order & Inquiry",
-              "Quality Control",
-              "Secure Packaging",
-              "Customs & Documentation",
-              "Container Stuffing",
-              "Global Delivery"
+           const titles = [
+              "Jute Sack",
+              "Bagss",
+              "Hank",
+              "Gunny Bags",
+              "Jute Floor Mat",
+              "Gunny"
             ];
             const cardTitle = titles[idx];
 
