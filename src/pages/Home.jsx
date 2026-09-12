@@ -332,9 +332,9 @@ export default function Home() {
       { title: "Jute Textile", desc: "Finely woven light fabric used for wrapping and décor.", img: textylesImg },
       { title: "Jute Handicrafts", desc: "Customized aesthetic handmade products and home decors.", img: sacksBagImg },
       { title: "Custom Jute Bulk", desc: "Bulk orders tailored with custom packaging for international export.", img: customJuteBulkImg },
-      { title: "Jute Dori", desc: "Strong and versatile natural jute dori for multi-purpose usage.", img: doriImg },
+      { title: "Jute Jute Cord", desc: "Strong and versatile natural jute dori for multi-purpose usage.", img: doriImg },
       { title: "Jute Bags Collection", desc: "Stylish and eco-friendly shopping & carry bags.", img: bagsImg },
-      { title: "Heavy Muta Dori", desc: "Extra thick and durable muta dori for industrial and heavy binding.", img: mutaDoriImg },
+      { title: "Heavy Jute Rope", desc: "Extra thick and durable muta dori for industrial and heavy binding.", img: mutaDoriImg },
     ]
     .map((item, idx) => {
       // জোড় কার্ডগুলো বাম দিক থেকে (-translate-x-20) এবং বেজোড় কার্ডগুলো ডান দিক থেকে (translate-x-20) স্লাইড করবে

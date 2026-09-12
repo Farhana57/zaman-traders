@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
+import juteSackImg from '../assets/Jute Sack.jpg';
+import bagssImg from '../assets/bagss.jpg';
+import hankImg from '../assets/Hank.jpg';
+import gunnyBagsImg from '../assets/Gunny Bags.jpg';
+import juteFloorMatImg from '../assets/Jute Floor Mat.jpg';
+
 const Export = () => {
   const [activeSlide, setActiveSlide] = useState(0);
 
@@ -81,44 +87,38 @@ const Export = () => {
         </div>
       </section>
 
-       {/* ================= EXPORT PROCESS SECTION ================= */}
+       {/* ================= EXPORT PROCESS SECTION (6 CARDS WITH IMAGES) ================= */}
 <section className="py-20 px-4 sm:px-6 max-w-7xl mx-auto overflow-hidden">
   <div className="text-center max-w-2xl mx-auto mb-16">
     <h2 className="text-3xl md:text-4xl font-extrabold text-emerald-950 mb-4">Our Streamlined Export Process</h2>
     <p className="text-slate-700 text-lg sm:text-xl leading-relaxed">
-  We ensure seamless door-to-port and port-to-port international shipping services.
-</p>
+      We ensure seamless door-to-port and port-to-port international shipping services with top-tier products.
+    </p>
   </div>
 
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
     
-    {/* Card 1 */}
-    <div className="bg-white p-6 sm:p-8 rounded-3xl shadow-lg border border-slate-100 text-center hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col items-center">
-      <div className="w-16 h-16 bg-emerald-100 text-emerald-700 rounded-2xl flex items-center justify-center text-2xl mb-6 font-bold">1</div>
-      <h3 className="font-bold text-xl text-emerald-950 mb-3">Order & Inquiry</h3>
-      <p className="text-slate-600 text-sm">Client specifies requirements, quality, grading, and quantity for custom packaging.</p>
-    </div>
-
-    {/* Card 2 */}
-    <div className="bg-white p-6 sm:p-8 rounded-3xl shadow-lg border border-slate-100 text-center hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col items-center">
-      <div className="w-16 h-16 bg-emerald-100 text-emerald-700 rounded-2xl flex items-center justify-center text-2xl mb-6 font-bold">2</div>
-      <h3 className="font-bold text-xl text-emerald-950 mb-3">Quality Control</h3>
-      <p className="text-slate-600 text-sm">Rigorous inspection and moisture testing to meet international export benchmarks.</p>
-    </div>
-
-    {/* Card 3 */}
-    <div className="bg-white p-6 sm:p-8 rounded-3xl shadow-lg border border-slate-100 text-center hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col items-center">
-      <div className="w-16 h-16 bg-emerald-100 text-emerald-700 rounded-2xl flex items-center justify-center text-2xl mb-6 font-bold">3</div>
-      <h3 className="font-bold text-xl text-emerald-950 mb-3">Secure Packaging</h3>
-      <p className="text-slate-600 text-sm">Compressed bales and moisture-proof packing to ensure safe sea or air cargo transit.</p>
-    </div>
-
-    {/* Card 4 */}
-    <div className="bg-white p-6 sm:p-8 rounded-3xl shadow-lg border border-slate-100 text-center hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col items-center">
-      <div className="w-16 h-16 bg-emerald-100 text-emerald-700 rounded-2xl flex items-center justify-center text-2xl mb-6 font-bold">4</div>
-      <h3 className="font-bold text-xl text-emerald-950 mb-3">Global Delivery</h3>
-      <p className="text-slate-600 text-sm">Customs clearance, documentation handling, and timely container dispatch worldwide.</p>
-    </div>
+    {[
+      { step: "1", title: "Order & Inquiry", desc: "Client specifies requirements, quality, grading, and quantity for custom packaging.", img: juteSackImg },
+      { step: "2", title: "Quality Control", desc: "Rigorous inspection and moisture testing to meet international export benchmarks.", img: bagssImg },
+      { step: "3", title: "Secure Packaging", desc: "Compressed bales and moisture-proof packing to ensure safe sea or air cargo transit.", img: hankImg },
+      { step: "4", title: "Customs & Documentation", desc: "Managing all export compliance, bills of lading, and legal paperwork smoothly.", img: gunnyBagsImg },
+      { step: "5", title: "Container Stuffing", desc: "Professional loading of goods into shipping containers to maximize space and safety.", img: juteFloorMatImg },
+      { step: "6", title: "Global Delivery", desc: "Timely dispatch and door-to-port or port-to-port worldwide shipping execution.", img: 'https://media.istockphoto.com/id/1151287557/photo/cream-cotton-linen-fabric-seamless-texture.webp?a=1&b=1&s=612x612&w=0&k=20&c=4-xB6Sg0hWxQaVFfFkk8YwgKZed6ndkuv6OKikk4M1c=' },
+    ].map((item, idx) => (
+      <div key={idx} className="bg-white rounded-3xl shadow-lg border border-slate-100 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col">
+        <div className="h-48 overflow-hidden relative">
+          <img src={item.img} alt={item.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+          <span className="absolute top-3 left-3 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+            Step {item.step}
+          </span>
+        </div>
+        <div className="p-6 sm:p-8 flex flex-col flex-grow text-center">
+          <h3 className="font-bold text-xl text-emerald-950 mb-3">{item.title}</h3>
+          <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
+        </div>
+      </div>
+    ))}
 
   </div>
 </section>
