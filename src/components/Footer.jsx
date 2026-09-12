@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin, Globe, MessageCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Globe, MessageCircle, Printer } from "lucide-react";
 import logo from "../assets/logo.png";
 
 const Footer = () => {
@@ -65,29 +65,40 @@ const Footer = () => {
                     <h4 className="text-white font-bold text-lg mb-3 inline-block">Contact Us</h4>
                     <div className="w-12 h-1 bg-emerald-500 rounded mb-4"></div>
                     <div className="space-y-3 text-sm text-slate-300">
+                        <p className="text-emerald-400 font-semibold italic text-xs">(Worldwide exporters of Jute & Jute goods)</p>
+                        
                         <div className="flex items-start gap-3">
                             <div className="w-8 h-8 bg-emerald-900/50 text-emerald-400 rounded-full flex items-center justify-center shrink-0 mt-1">
                                 <MapPin size={16} />
                             </div>
-                            <p className="leading-relaxed">3 R.K Mission Road, Lily Pond Center, Level-10, Motijheel C/A, Dhaka-1203, Bangladesh</p>
+                            <p className="leading-relaxed">LILY POND CENTER (10th FLOOR), SUITE- I, MOTIJHEEL COMMERCIAL AREA, DHAKA-1000, BANGLADESH.</p>
                         </div>
+
                         <div className="flex items-start gap-3">
                             <div className="w-8 h-8 bg-emerald-900/50 text-emerald-400 rounded-full flex items-center justify-center shrink-0">
                                 <Phone size={16} />
                             </div>
                             <div>
-                                <p>(+8802) 41054317</p>
-                                <p>(+8802) 41054318</p>
-                                <p>+880 1711 523825</p>
+                                <p>880-2-41054317, 41054318</p>
+                                <p>+880-1711523825 (Imo/viber/WhatsApp)</p>
                             </div>
                         </div>
+
+                        <div className="flex items-start gap-3">
+                            <div className="w-8 h-8 bg-emerald-900/50 text-emerald-400 rounded-full flex items-center justify-center shrink-0">
+                                <Printer size={16} />
+                            </div>
+                            <p>880-2-41054319</p>
+                        </div>
+
                         <div className="flex items-start gap-3">
                             <div className="w-8 h-8 bg-emerald-900/50 text-emerald-400 rounded-full flex items-center justify-center shrink-0">
                                 <Mail size={16} />
                             </div>
-                            <div className="break-all">
-                                <p>Jute83620@gmail.com</p>
+                            <div className="break-all space-y-0.5">
+                                <p>zzaman@bol-online.com</p>
                                 <p>zzamanjute@gmail.com</p>
+                                <p>Jahantraders86@gmail.com</p>
                                 <p>zamantraders83620@gmail.com</p>
                             </div>
                         </div>
@@ -98,7 +109,7 @@ const Footer = () => {
 
             {/* Copyright Bar */}
             <div className="border-t border-emerald-900/80 pt-6 text-center text-xs text-slate-400">
-                <p>&copy; 2026 Jahan Traders. All Rights Reserved.</p>
+                <p>&copy; 2026 ZAMAN TRADERS. All Rights Reserved. | <a href="https://zamantradersbd.com" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400">zamantradersbd.com</a></p>
             </div>
         </footer>
     );

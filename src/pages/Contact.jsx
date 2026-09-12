@@ -80,8 +80,9 @@ export default function Contact() {
               <h4 className="font-bold text-slate-900 text-base sm:text-lg">Office Address</h4>
               <p className="text-slate-800 text-sm sm:text-base mt-1.5 leading-relaxed">
                 ZAMAN Traders.<br />
-                3 R K mission road, Motijheel C/A, Dhaka 1203, Bangladesh.
+                LILY POND CENTER (10th FLOOR), SUITE- I, MOTIJHEEL COMMERCIAL AREA, DHAKA-1000, BANGLADESH.
               </p>
+              <p className="text-emerald-700 font-semibold italic text-xs mt-1">(Worldwide exporters of Jute & Jute goods)</p>
             </div>
           </div>
 
@@ -93,10 +94,16 @@ export default function Contact() {
               </svg>
             </div>
             <div>
-              <h4 className="font-bold text-slate-900 text-base sm:text-lg">Phone</h4>
-              <a href="tel:+8801711523825" className="text-emerald-700 hover:underline text-sm sm:text-base font-semibold mt-1.5 inline-block">
-                +880 1711 523825
-              </a>
+              <h4 className="font-bold text-slate-900 text-base sm:text-lg">Phone & Fax</h4>
+              <div className="flex flex-col mt-1.5 gap-1">
+                <a href="tel:+880241054317" className="text-emerald-700 hover:underline text-sm sm:text-base font-semibold">
+                  880-2-41054317, 41054318
+                </a>
+                <a href="tel:+8801711523825" className="text-emerald-700 hover:underline text-sm sm:text-base font-semibold">
+                  +880-1711523825 (Imo/viber/WhatsApp)
+                </a>
+                <span className="text-slate-600 text-sm font-medium">Fax: 880-2-41054319</span>
+              </div>
             </div>
           </div>
 
@@ -110,11 +117,17 @@ export default function Contact() {
             <div>
               <h4 className="font-bold text-slate-900 text-base sm:text-lg">Email</h4>
               <div className="flex flex-col mt-1.5 gap-1">
-                <a href="mailto:zamantraders83620@gmail.com" className="text-emerald-900 hover:underline text-sm sm:text-base font-semibold break-all">
-                  zamantraders83620@gmail.com
+                <a href="mailto:zzaman@bol-online.com" className="text-emerald-900 hover:underline text-sm sm:text-base font-semibold break-all">
+                  zzaman@bol-online.com
                 </a>
                 <a href="mailto:zzamanjute@gmail.com" className="text-emerald-900 hover:underline text-sm sm:text-base font-semibold break-all">
                   zzamanjute@gmail.com
+                </a>
+                <a href="mailto:Jahantraders86@gmail.com" className="text-emerald-900 hover:underline text-sm sm:text-base font-semibold break-all">
+                  Jahantraders86@gmail.com
+                </a>
+                <a href="mailto:zamantraders83620@gmail.com" className="text-emerald-900 hover:underline text-sm sm:text-base font-semibold break-all">
+                  zamantraders83620@gmail.com
                 </a>
               </div>
             </div>

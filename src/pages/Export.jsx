@@ -76,25 +76,38 @@ const Export = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           
           {[
-            { title: "Order & Inquiry", desc: "Client specifies requirements, quality, grading, and quantity for custom packaging.", img: juteSackImg },
-            { title: "Quality Control", desc: "Rigorous inspection and moisture testing to meet international export benchmarks.", img: bagssImg },
-            { title: "Secure Packaging", desc: "Compressed bales and moisture-proof packing to ensure safe sea or air cargo transit.", img: hankImg },
-            { title: "Customs & Documentation", desc: "Managing all export compliance, bills of lading, and legal paperwork smoothly.", img: gunnyBagsImg },
-            { title: "Container Stuffing", desc: "Professional loading of goods into shipping containers to maximize space and safety.", img: juteFloorMatImg },
-            { title: "Global Delivery", desc: "Timely dispatch and door-to-port or port-to-port worldwide shipping execution.", img: 'https://media.istockphoto.com/id/1151287557/photo/cream-cotton-linen-fabric-seamless-texture.webp?a=1&b=1&s=612x612&w=0&k=20&c=4-xB6Sg0hWxQaVFfFkk8YwgKZed6ndkuv6OKikk4M1c=' },
-          ].map((item, idx) => (
-            <div key={idx} className="bg-white rounded-3xl shadow-lg border border-slate-100 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col">
-              <div className="h-48 overflow-hidden relative">
-                <img src={item.img} alt={item.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
-              </div>
-              <div className="p-6 sm:p-8 flex flex-col flex-grow text-center">
-                <h3 className="font-bold text-xl text-emerald-950 mb-3">{item.title}</h3>
-                <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
-              </div>
-            </div>
-          ))}
+            { desc: "Client specifies requirements, quality, grading, and quantity for custom packaging.", img: juteSackImg },
+            { desc: "Rigorous inspection and moisture testing to meet international export benchmarks.", img: bagssImg },
+            { desc: "Compressed bales and moisture-proof packing to ensure safe sea or air cargo transit.", img: hankImg },
+            { desc: "Managing all export compliance, bills of lading, and legal paperwork smoothly.", img: gunnyBagsImg },
+            { desc: "Professional loading of goods into shipping containers to maximize space and safety.", img: juteFloorMatImg },
+            { desc: "Timely dispatch and door-to-port or port-to-port worldwide shipping execution.", img: 'https://media.istockphoto.com/id/1151287557/photo/cream-cotton-linen-fabric-seamless-texture.webp?a=1&b=1&s=612x612&w=0&k=20&c=4-xB6Sg0hWxQaVFfFkk8YwgKZed6ndkuv6OKikk4M1c=' },
+          ].map((item, idx) => {
+            // ইমেজের নাম থেকে কার্ডের টাইটেল নির্ধারণ করা হচ্ছে
+            const titles = [
+              "Order & Inquiry",
+              "Quality Control",
+              "Secure Packaging",
+              "Customs & Documentation",
+              "Container Stuffing",
+              "Global Delivery"
+            ];
+            const cardTitle = titles[idx];
 
-        </div>
+            return (
+              <div key={idx} className="bg-white rounded-3xl shadow-lg border border-slate-100 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col">
+                <div className="h-48 overflow-hidden relative">
+                  <img src={item.img} alt={cardTitle} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div className="p-6 sm:p-8 flex flex-col flex-grow text-center">
+                  <h3 className="font-bold text-xl text-emerald-950 mb-3">{cardTitle}</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            );
+          })}
+
+</div>
       </section>
 
       {/* ================= GLOBAL REACH SECTION ================= */}
