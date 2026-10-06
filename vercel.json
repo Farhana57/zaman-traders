@@ -3,10 +3,10 @@
   "services": {
     "app": {
       "root": "my-app",
-      "framework": "vite"
+      "outputDirectory": "build"
     },
     "backend": {
-      "root": "my-contact-app",
+      "root": "my-contact-app/backend",
       "framework": "express"
     }
   },
